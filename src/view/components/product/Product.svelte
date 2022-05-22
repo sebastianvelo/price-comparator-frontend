@@ -5,7 +5,7 @@
 <a href={product.url} target="_blank">
     <div
         class="border border-black p-4 flex w-full md:h-full md:flex-col items-center 
-                justify-between rounded-xl space-x-4 md:space-x-0 space-y-2 bg-gradient-to-tr from-white to-blue-100"
+                justify-between rounded-xl space-x-4 md:space-x-0 space-y-2 bg-gradient-to-tl from-white to-blue-100 hover:to-blue-300"
     >
         <div class="flex space-x-4 items-center md:flex-col md:space-y-2 md:space-x-0">
             <img

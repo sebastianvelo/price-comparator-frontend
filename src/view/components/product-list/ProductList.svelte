@@ -8,7 +8,7 @@
 
 <div class="w-full space-y-4 h-screen overflow-y-auto">
     {#await products}
-        <p class="text-white text-3xl">Buscando {query}...</p>
+        <p class="text-white text-xl md:text-3xl font-bold">Buscando {query}...</p>
     {:then products}
         {#if products.length === 0}
             <Error>No se han encontrado productos</Error>

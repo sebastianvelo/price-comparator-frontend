@@ -1,7 +1,7 @@
 <script>
     import ProductList from "../components/product-list/ProductList.svelte";
     import Searchbar from "../components/search-bar/Searchbar.svelte";
-    import SearchFilters from "../components/search-filters/SearchFilters.svelte";
+    import CommerceFilters from "../components/commerce-filter/CommerceFilters.svelte";
     import search from "../../api/search.service";
 
     let products = [];
@@ -49,11 +49,10 @@
         },
     ];
 
-    const getSources = () => {
-        return sourcesCheckbox
+    const getSources = () =>
+        sourcesCheckbox
             .filter((source) => source.active)
             .map((source) => source.id);
-    };
 
     const onSearch = () => {
         const sources = getSources();
@@ -63,13 +62,11 @@
     };
 </script>
 
-<main
-    class="bg-gradient-to-b from-black to-gray-600 min-h-screen max-w-screen"
->
-    <div class="flex  flex-col lg:grid lg:grid-cols-4">
+<main class="bg-gradient-to-b from-black to-gray-600 min-h-screen max-w-screen">
+    <div class="flex flex-col lg:grid lg:grid-cols-4">
         <div class="bg-black lg:min-h-screen bg-opacity-40">
-            <Searchbar {onSearch} bind:query />
-            <SearchFilters bind:sourcesCheckbox />
+            <Searchbar bind:query {onSearch} />
+            <CommerceFilters bind:sourcesCheckbox />
         </div>
         <div class="lg:col-span-3 px-4">
             <ProductList {products} {query} />
