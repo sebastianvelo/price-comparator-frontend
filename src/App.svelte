@@ -1,14 +1,8 @@
 <script>
-  export let name;
+  import SearchPage from "./view/pages/SearchPage.svelte";
 </script>
 
-<main>
-  <h1>Hello {name}!</h1>
-  <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
-    how to build Svelte apps.
-  </p>
-</main>
+<SearchPage />
 
 <style lang="postcss" global>
   @tailwind base;
